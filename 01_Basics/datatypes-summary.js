@@ -38,7 +38,36 @@ let myFunction = function(){
 myFunction();
 
 
-console.log(typeof bigNumber);
-console.log(typeof heros); //=> object
-console.log(typeof object);// => object
-console.log(typeof myFunction); // function
+// console.log(typeof bigNumber);
+// console.log(typeof heros); //=> object
+// console.log(typeof object);// => object
+// console.log(typeof myFunction); // function
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive) and Heap (Non primitive)
+
+let myYoutubeName = "Posterboss";
+
+let anotherName = myYoutubeName;
+anotherName = "Prushottam";
+
+// console.log(myYoutubeName);
+// console.log(anotherName);
+
+// Heap 
+
+let userOne = {
+    email: "Hariom@gmail.com",
+    age: 34,
+}
+
+let userTwo = userOne;
+
+userTwo.email ="Harekrishna@ram.com";
+userOne.age = 22;
+console.log(userTwo);
+console.log(userOne);
+
+
