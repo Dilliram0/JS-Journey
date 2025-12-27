@@ -12,48 +12,48 @@
   <script>
     // setInterval peforms tasks in a interval time
 
-    // // 1. Get elements once
-    // const startBtn = document.querySelector("#start");
-    // const stopBtn = document.querySelector("#stop");
-
-    // // 2. State
-    // let intervalId = null;
-
-    // // 3. Logic
-    // function printName() {
-    //   console.log("I'm a muffin");
-    // }
-
-    // // 4. Events
-    // startBtn.addEventListener("click", () => {
-    //   if (intervalId === null) {
-    //     intervalId = setInterval(printName, 1000);
-    //   }
-    // });
-
-    // stopBtn.addEventListener("click", () => {
-    //   clearInterval(intervalId);
-    //   intervalId = null;
-    // });
-
-
+    // 1. Get elements once
     const startBtn = document.querySelector("#start");
     const stopBtn = document.querySelector("#stop");
 
-    const printName = function(){
-       intervalId = setInterval(displayName,1000)
+    // 2. State
+    let intervalId = null;
 
-       function displayName(){
-        console.log('Hare Krishna')
-       }
+    // 3. Logic
+    function printName() {
+      console.log("I'm a muffin");
     }
 
-    const stopPrint = function(){
-        clearInterval(intervalId)
-    }
+    // 4. Events
+    startBtn.addEventListener("click", () => {
+      if (intervalId === null) {
+        intervalId = setInterval(printName, 1000);
+      }
+    });
 
-    startBtn.addEventListener('click',printName)
-    stopBtn.addEventListener('click',stopPrint)
+    stopBtn.addEventListener("click", () => {
+      clearInterval(intervalId);
+      intervalId = null;
+    });
+
+
+    // const startBtn = document.querySelector("#start");
+    // const stopBtn = document.querySelector("#stop");
+
+    // const printName = function(){
+    //    intervalId = setInterval(displayName,1000)
+
+    //    function displayName(){
+    //     console.log('Hare Krishna')
+    //    }
+    // }
+
+    // const stopPrint = function(){
+    //     clearInterval(intervalId)
+    // }
+
+    // startBtn.addEventListener('click',printName)
+    // stopBtn.addEventListener('click',stopPrint)
 
 
   </script>
