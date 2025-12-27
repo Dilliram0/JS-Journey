@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>setTimeOut</title>
-  </head>
-  <body>
-    <h1>Chai aur Code</h1>
-    <button id="stop">Stop</button>
-  </body>
-  <script>
-    // setTimeout gives output after a certain time only once
+<head>
+  <meta charset="UTF-8" />
+  <title>setTimeOut</title>
+</head>
 
-    const printName = function () {
-      console.log("Abhisek");
-    };
+<body>
+  <h1>Chai aur Code</h1>
+  <button id="stop">Stop</button>
+</body>
 
-    const changeText = function () {
-      document.querySelector("h1").innerHTML = "Best JS SERIES";
-    };
+<script>
+  // setTimeout runs a function once after a delay
 
-    setTimeout(printName, 2000);
+  // Prints a name in the console
+  const printName = function () {
+    console.log("Abhisek");
+  };
 
-    const changeMe = setTimeout(changeText, 2000);
+  // Changes the h1 text
+  const changeText = function () {
+    document.querySelector("h1").innerHTML = "Best JS SERIES";
+  };
 
-    const button = document.querySelector("#stop");
-    button.addEventListener("click", function () {
-      clearTimeout(changeMe);
-      console.log('STOPPED')
-    });
+  // Run printName after 2 seconds
+  setTimeout(printName, 2000);
 
-    
-  </script>
+  // Run changeText after 2 seconds (store its ID)
+  const changeMe = setTimeout(changeText, 2000);
+
+  // Get the stop button
+  const button = document.querySelector("#stop");
+
+  // Stop the text change when button is clicked
+  button.addEventListener("click", function () {
+    clearTimeout(changeMe);
+    console.log("STOPPED");
+  });
+</script>
 </html>
