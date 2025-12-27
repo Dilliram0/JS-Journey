@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="timer" style="font-size: 2em; font-family: monospace"></div>
+    <button id="startBtn">Start 10-Second Countdown</button>
+    <button id="stopBtn">Stop Countdown</button>
+    <h1>Hello Krishna</h1>
+    <button id="clock"></button>
+    <script>
+      const timerDisplay = document.getElementById("timer");
+      const startBtn = document.getElementById("startBtn");
+      const stopBtn = document.getElementById("stopBtn");
+
+      let timeLeft;
+      let countDown; // store interval ID
+
+      const runTimer = function () {
+        timeLeft--;
+        timerDisplay.innerText = timeLeft;
+
+        if (timeLeft <= 0) {
+          alert("STOPPED");
+          clearInterval(countDown);
+        }
+      };
+
+      startTimer = function () {
+        timeLeft = 10;
+        timerDisplay.innerText = timeLeft;
+
+        clearInterval(countDown);
+        console.log(countDown);
+
+        countDown = setInterval(runTimer, 1000);
+      };
+
+      const stopTimer = function () {
+        clearInterval(countDown);
+      };
+
+      startBtn.addEventListener("click", startTimer);
+      stopBtn.addEventListener("click", stopTimer);
+    </script>
+  </body>
+</html>
